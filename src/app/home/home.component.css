@@ -1,0 +1,32 @@
+.home-animes-hot-title{
+  padding: 2%;
+  background: rgba(0,0,0,.60);
+}
+
+.home-animes-hot-title h3{
+  margin: 2%;
+  color: red;
+}
+
+.home-animes-hot-title i{
+padding: 10px;
+}
+
+.home-animes-hot{
+  height: 83%;
+}
+
+h3{
+  font-family: 'Press Start 2P', cursive;
+  font-size: medium;
+}
+
+.mat-grid-tile .mat-grid-tile-header, .mat-grid-tile .mat-grid-tile-footer{
+  background: rgba(0,0,0,.60);
+}
+
+mat-grid-tile img{
+  object-fit: fill;
+  max-width: 100%;
+  min-height: 100%;
+}

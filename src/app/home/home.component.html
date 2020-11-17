@@ -1,0 +1,21 @@
+<mat-grid-list class="home-animes-hot-title" cols="1" rowHeight="fit">
+  <mat-grid-tile>
+    <h3><i class="fab fa-hotjar"></i>Mais vistos da semana<i class="fab fa-hotjar"></i></h3>
+  </mat-grid-tile>
+</mat-grid-list>
+<mat-grid-list class="home-animes-hot" cols="4" rowHeight="fit">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      <img [src]="tile.img">
+      <mat-grid-tile-header class="font-pstart-titles">
+        <h3>{{tile.title}}{{tile.genero}}</h3>
+      </mat-grid-tile-header>
+      <mat-grid-tile-footer>
+        <h3>Nota - {{tile.rate}}</h3>
+      </mat-grid-tile-footer>
+    </mat-grid-tile>
+  </mat-grid-list>
+ 

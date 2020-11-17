@@ -1,0 +1,40 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="font-pstart-titles">Categorias</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item href="#"><i class="fas fa-hand-rock"></i>Ação</a>
+      <a mat-list-item href="#"><i class="fab fa-fort-awesome"></i>Aventura</a>
+      <a mat-list-item href="#"><i class="fas fa-hat-cowboy"></i>Faroeste</a>
+      <a mat-list-item href="#"><i class="fas fa-heart"></i>Romance</a>
+      <a mat-list-item href="#"><i class="fas fa-theater-masks"></i>Drama</a>
+      <a mat-list-item href="#"><i class="fas fa-grin-squint-tears"></i>Comédia</a>
+      <a mat-list-item href="#"><i class="fas fa-poo"></i>Paródia</a>
+      <a mat-list-item href="#"><i class="fas fa-robot"></i>Sci-fi</a>
+      <a mat-list-item href="#"><i class="fas fa-grimace"></i>Horror</a>
+      <a mat-list-item href="#"><i class="fas fa-fighter-jet"></i>Guerra</a>
+      <a mat-list-item href="#"><i class="fas fa-crosshairs"></i>Policial</a>
+      <a mat-list-item href="#"><i class="fas fa-futbol"></i>Esportes</a>
+      <a mat-list-item href="#"><i class="fas fa-torii-gate"></i>Artes Marciais</a>
+      <a mat-list-item href="#"><i class="fab fa-galactic-republic"></i>Universo Paralelo</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="font-pstart-logo"><i class="fas fa-film"></i>ANIMEFLIX<i class="fas fa-film"></i></span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
